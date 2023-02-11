@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace trap
+namespace shipbattle_game
 {
     public partial class Form1 : Form
     {
@@ -23,6 +23,7 @@ namespace trap
         Rectangle Tank, Projectile;
         SolidBrush tankBrush = new SolidBrush(Color.Black);
         bool isProjectile = false;
+        int scoreCount = 0;
 
         private void Game()
         {
@@ -75,12 +76,13 @@ namespace trap
                 Ally.NewShip();
                 NewProjectile();
                 isProjectile = false;
+                scoreCount++;
             }
             if (Ally.HasCollided(Projectile))
             {
                 timer1.Enabled = false;
-                MessageBox.Show("You have hit an ally! Close this window and then press [space] to start new game or press [esc] to exit.", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                MessageBox.Show("You have hit an ally!  Close this window and then press [space] to start new game or press [esc] to exit.", $"Game over! Your score: {scoreCount}.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                scoreCount = 0;
             }
 
             dProjectileX += dVx;

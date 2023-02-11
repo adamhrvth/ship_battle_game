@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D18626DC-014C-43BA-B24B-98D361DBA89C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>csapda</RootNamespace>
-    <AssemblyName>csapda</AssemblyName>
+    <RootNamespace>shipbattle_game</RootNamespace>
+    <AssemblyName>shipbattle_game</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
